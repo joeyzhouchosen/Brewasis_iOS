@@ -19,7 +19,8 @@ class LoginGuideCell: UICollectionViewCell{
         didSet {
             mainImageView.image = UIImage(named: loginPage!.imageName)
             backgroundColor = loginPage?.color
-            
+            titleBox.text = loginPage?.title
+            messageBox.text = loginPage?.message
         }
     }
     
@@ -42,6 +43,8 @@ class LoginGuideCell: UICollectionViewCell{
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
         title.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        title.font = UIFont(name: "OpenSans", size: 35)
+        title.textAlignment = .center
         return title
     }()
     
@@ -50,27 +53,38 @@ class LoginGuideCell: UICollectionViewCell{
         let message = UILabel()
         message.translatesAutoresizingMaskIntoConstraints = false
         message.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        message.font = UIFont(name: "OpenSans", size: 20)
+        message.textAlignment = .center
+        message.numberOfLines = 6
+        
         return message
     }()
     
     func setupViews() {
         addSubview(mainImageView)
         mainImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        mainImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        mainImageView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -150).isActive = true
         mainImageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         mainImageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
         
+        addSubview(titleBox)
+        titleBox.topAnchor.constraint(equalTo: mainImageView.bottomAnchor, constant: 0).isActive = true
+        titleBox.centerXAnchor.constraint(lessThanOrEqualTo: centerXAnchor).isActive = true
+        titleBox.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        titleBox.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        
         addSubview(seperatorLine)
-        seperatorLine.topAnchor.constraint(equalTo: mainImageView.bottomAnchor, constant: 30).isActive = true
+        seperatorLine.topAnchor.constraint(equalTo: titleBox.bottomAnchor, constant: -20).isActive = true
         seperatorLine.centerXAnchor.constraint(lessThanOrEqualTo: centerXAnchor).isActive = true
         seperatorLine.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        seperatorLine.leftAnchor.constraint(equalTo: leftAnchor, constant: 50).isActive = true
-        seperatorLine.rightAnchor.constraint(equalTo: rightAnchor, constant: -50).isActive = true
-        
-//        collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-//        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-//        collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-//        collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        seperatorLine.leftAnchor.constraint(equalTo: leftAnchor, constant: 100).isActive = true
+        seperatorLine.rightAnchor.constraint(equalTo: rightAnchor, constant: -100).isActive = true
+     
+        addSubview(messageBox)
+        messageBox.topAnchor.constraint(equalTo: seperatorLine.bottomAnchor, constant: 20).isActive = true
+        messageBox.centerXAnchor.constraint(lessThanOrEqualTo: centerXAnchor).isActive = true
+        messageBox.heightAnchor.constraint(lessThanOrEqualToConstant: 500).isActive = true
+        messageBox.widthAnchor.constraint(lessThanOrEqualToConstant: 300).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {

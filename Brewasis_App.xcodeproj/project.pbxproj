@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680AFDF322CEB18400FB0227 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 680AFDF022CEB18400FB0227 /* OpenSans-Bold.ttf */; };
+		680AFDF422CEB18400FB0227 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 680AFDF122CEB18400FB0227 /* OpenSans-Light.ttf */; };
+		680AFDF522CEB18400FB0227 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 680AFDF222CEB18400FB0227 /* OpenSans-Regular.ttf */; };
 		6835A0E222C26E4B00487410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6835A0E122C26E4B00487410 /* AppDelegate.swift */; };
 		6835A0E422C26E4B00487410 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6835A0E322C26E4B00487410 /* ViewController.swift */; };
 		6835A0E922C26E4D00487410 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6835A0E822C26E4D00487410 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		680AFDF022CEB18400FB0227 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../../Downloads/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		680AFDF122CEB18400FB0227 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "../../../../Downloads/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		680AFDF222CEB18400FB0227 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../../Downloads/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		6835A0DE22C26E4B00487410 /* Brewasis_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewasis_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6835A0E122C26E4B00487410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6835A0E322C26E4B00487410 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		680AFDE222CDAA2900FB0227 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				680AFDF022CEB18400FB0227 /* OpenSans-Bold.ttf */,
+				680AFDF122CEB18400FB0227 /* OpenSans-Light.ttf */,
+				680AFDF222CEB18400FB0227 /* OpenSans-Regular.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		6835A0D522C26E4B00487410 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +72,7 @@
 		6835A0E022C26E4B00487410 /* Brewasis_App */ = {
 			isa = PBXGroup;
 			children = (
+				680AFDE222CDAA2900FB0227 /* Resources */,
 				6838485622CBC0B700229447 /* Models */,
 				6838485722CBCAD100229447 /* Views */,
 				6838485A22CBD44A00229447 /* Controllers */,
@@ -149,8 +166,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680AFDF522CEB18400FB0227 /* OpenSans-Regular.ttf in Resources */,
 				6835A0EC22C26E4D00487410 /* LaunchScreen.storyboard in Resources */,
 				6835A0E922C26E4D00487410 /* Assets.xcassets in Resources */,
+				680AFDF422CEB18400FB0227 /* OpenSans-Light.ttf in Resources */,
+				680AFDF322CEB18400FB0227 /* OpenSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

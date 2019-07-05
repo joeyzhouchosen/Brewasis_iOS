@@ -36,7 +36,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         
         cv.translatesAutoresizingMaskIntoConstraints = false
         
-        cv.backgroundColor = .purple
+        cv.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         cv.delegate = self
         
